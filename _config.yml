@@ -3,7 +3,7 @@ title: Plugits | invent, !reinvent
 email: 
 description: An open forum to share and search composable software components.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://plugits.github.io/" # the base hostname & protocol for your site
+url: "https://plugits.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-144278656-1"
 
 # User Settings
