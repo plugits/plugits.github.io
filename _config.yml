@@ -1,13 +1,13 @@
 # Site Settings
-title: Jekflix | A theme for Jekyll
-email: youremail@xyz.com
-description: Some text about your blog.
+title: Plugits | invent, !reinvent
+email: 
+description: An open forum to share and search composable software components.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jekflix.rossener.com" # the base hostname & protocol for your site
-google_analytics: "UA-XXXXXXXX-X"
+url: "https://plugits.github.io/" # the base hostname & protocol for your site
+google_analytics: "UA-144278656-1"
 
 # User Settings
-username: Jekflix
+username: Developer
 user_description: Some text about you.
 disqus_username: disqus_username
 
