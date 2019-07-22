@@ -7,15 +7,15 @@ url: "https://plugits.github.io/" # the base hostname & protocol for your site
 google_analytics: "UA-144278656-1"
 
 # User Settings
-username: Developer
+username: Plugits
 user_description: Some text about you.
 disqus_username: disqus_username
 
 # Social Media
 # Remove the item if you don't need it
-github_username: github_username
+github_username: plugits
 facebook_username: facebook_username
-twitter_username: twitter_username
+twitter_username: justplugits
 instagram_username: instagram_username
 linkedin_username: linkedin_username
 medium_username: medium_username
