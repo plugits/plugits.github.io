@@ -1,0 +1,11 @@
+.description{
+    /*height: 6em;*/
+    overflow: hidden;
+}
+.tags {
+    margin-top: 2em;
+}
+
+.post-title {
+    height: 4em;
+}
