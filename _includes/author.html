@@ -3,9 +3,15 @@
     <img itemprop="image" class="img-rounded" src="http://res.cloudinary.com/dm7h7e8xj/image/upload/c_fill,h_200,w_200/v1504971955/neo_ruqszk.jpg" alt="{{ site.name }}">
     <p class="def">Author</p>
     <h3 class="name">
-      <a itemprop="name" href="https://github.com/{{ site.github_username }}">{{ site.username }}</a>
+      <a itemprop="name" href="https://github.com/{{ page.github_username }}">
+        {% if page.author_name %}  
+          {{ page.author_name }}
+        {% else   %}
+          {{ site.username }}
+        {% endif %}
+      </a>
     </h3>
-    <p class="desc">{{ site.user_description }}</p>
+    <p class="desc">{{ page.author_description }}</p>
     <p>
       {% if site.github_username %}
       <a itemprop="github" href="https://github.com/{{ site.github_username }}" title="Github">

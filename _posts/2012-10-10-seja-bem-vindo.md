@@ -6,6 +6,11 @@ image: 'http://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_760/v15048072
 category: 'blog'
 twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+author_name: "Swapnil Shrikhande"
+github_username: "svshrikhande"
+author_description: "Technical Guy"
+author_github: "swapnilshrikhande"
 ---
 
 Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
