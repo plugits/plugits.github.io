@@ -5,6 +5,9 @@
     <a id="search" class="dosearch">
         <svg class="icon-search"><use xlink:href="#icon-search"></use></svg>
     </a>
+    <a class="search-help-text">
+        Press 's' key to search
+    </a>
     <h1 class="logo">
         <a href="{{ site.baseurl }}/">
             {{ site.username }}
@@ -14,5 +17,4 @@
 
 <div id="mask" class="overlay"></div>
 
-{% include menu.html %}
-{% include search.html %}
+{% include menu.html %} {% include search.html %}
