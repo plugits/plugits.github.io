@@ -1,11 +1,19 @@
-.description{
+.description {
     /*height: 6em;*/
     overflow: hidden;
 }
+
 .tags {
     margin-top: 2em;
 }
 
 .post-title {
     height: 4em;
+}
+
+.search-help-text {
+    float: right;
+    color: white;
+    padding: 5px;
+    margin: 1px;
 }

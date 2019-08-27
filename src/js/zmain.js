@@ -1,60 +1,71 @@
-(function( $, window, undefined ) {
-  // Menu
-  $("#menu").click(function() {
-    $("body").addClass("push-menu-to-right");
-    $("#sidebar").addClass("open");
-    $(".overlay").addClass("show");
-  });
+(function($, window, undefined) {
+    // Menu
+    $("#menu").click(function() {
+        $("body").addClass("push-menu-to-right");
+        $("#sidebar").addClass("open");
+        $(".overlay").addClass("show");
+    });
 
-  $("#mask").click(function() {
-    $("body").removeClass("push-menu-to-right");
-    $("#sidebar").removeClass("open");
-    $(".overlay").removeClass("show");
-  });
+    $("#mask").click(function() {
+        $("body").removeClass("push-menu-to-right");
+        $("#sidebar").removeClass("open");
+        $(".overlay").removeClass("show");
+    });
 
-  // Search
-  var bs = {
-    close: $(".icon-remove-sign"),
-    searchform: $(".search-form"),
-    canvas: $("body"),
-    dothis: $('.dosearch')
-  };
+    // Search
+    var bs = {
+        close: $(".icon-remove-sign"),
+        searchform: $(".search-form"),
+        canvas: $("body"),
+        dothis: $('.dosearch')
+    };
 
-  bs.dothis.on('click', function() {
-    $('.search-wrapper').toggleClass('active');
-    bs.searchform.toggleClass('active');
-    bs.searchform.find('input').focus();
-    bs.canvas.toggleClass('search-overlay');
-    $('.search-field').simpleJekyllSearch();
-  });
+    bs.dothis.on('click', function() {
+        open_search();
+    });
 
-  function close_search() {
-    $('.search-wrapper').toggleClass('active');
-    bs.searchform.toggleClass('active');
-    bs.canvas.removeClass('search-overlay');
-  }
+    function open_search() {
+        $('.search-wrapper').toggleClass('active');
+        bs.searchform.toggleClass('active');
+        bs.searchform.find('input').val("").trigger("keyup").focus();
+        bs.canvas.toggleClass('search-overlay');
+        $('.search-field').simpleJekyllSearch();
+    }
 
-  bs.close.on('click', close_search);
+    function close_search() {
+        $('.search-wrapper').toggleClass('active');
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    }
 
-  // Closing menu with ESC
-  document.addEventListener('keyup', function(e){
-      if(e.keyCode == 27 && $('.search-overlay').length) {
-          close_search();
-      }
-  });
-  
-  if (document.getElementsByClassName('home').length >=1 ) {
-      new AnimOnScroll( document.getElementById( 'grid' ), {
-        minDuration : 0.4,
-        maxDuration : 0.7,
-        viewportFactor : 0.2
-      });
-  }
+    bs.close.on('click', close_search);
 
-  smoothScroll.init({
-      selectorHeader: '.bar-header', // Selector for fixed headers (must be a valid CSS selector)
-      speed: 500, // Integer. How fast to complete the scroll in milliseconds
-      updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-  });
+    // Closing menu with ESC
+    document.addEventListener('keyup', function(e) {
 
-})( Zepto, window );
+        if (e.keyCode == 83 && !$('.search-overlay').length) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            open_search();
+        }
+
+        if (e.keyCode == 27 && $('.search-overlay').length) {
+            close_search();
+        }
+    });
+
+    if (document.getElementsByClassName('home').length >= 1) {
+        new AnimOnScroll(document.getElementById('grid'), {
+            minDuration: 0.4,
+            maxDuration: 0.7,
+            viewportFactor: 0.2
+        });
+    }
+
+    smoothScroll.init({
+        selectorHeader: '.bar-header', // Selector for fixed headers (must be a valid CSS selector)
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+    });
+
+})(Zepto, window);

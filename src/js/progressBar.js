@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
     'use strict';
 
     var post = document.querySelector('.post-content');
@@ -61,4 +61,4 @@
             lastScrollTop = scrollTop;
         });
     }
-})();
+})();*/
