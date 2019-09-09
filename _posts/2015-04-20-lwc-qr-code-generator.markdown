@@ -1,10 +1,14 @@
 ---
+layout: post
 title:  "QR Code Generator"
 subtitle: "Lightning Web Component"
 author: "@21rathishivani"
 avatar: "https://pbs.twimg.com/profile_images/918403501729890304/ULEIJDfY_400x400.jpg"
-image: "img/d.jpg"
+image: "/img/d.jpg"
 date:   2019-06-14 12:12:12
+author_name: Shivani Rathi
+category: 'Snippets'
+tags: 'Salesforce QR-Code'
 ---
 Lightning Web Component: QR Code in Salesforce
 ----------------------------------------------

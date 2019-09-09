@@ -1,10 +1,13 @@
 ---
+layout: post
 title:  "Plugit Framework"
 subtitle: "Apex framework for building modular plugits"
-author: "@svshrikhande"
+author_name: "@svshrikhande"
 avatar: "http://swapnilshrikhande.in/assets/img/swapnil-shrikhande.jpg"
-image: "img/plugit_framework.jpg"
+image: "/img/plugit_framework.jpg"
 date:   2017-07-03 03:26:00
+category: 'Apex Framework'
+tags: 'Salesforce'
 ---
 
 # Plugit : A Module Framework For Apex 
@@ -25,7 +28,7 @@ Ever wondered if the apex software blocks can be easily installed and plugged in
 - Use pipe keyword to easily chain multiple plugits like below
 
 ### typical usage example
-```
+```java
 // load QueryAccounts plugit and pipe its output to next plugit and so on
 
 Pluggable resultPlug = plugin('QueryAccounts')
@@ -47,7 +50,7 @@ if( resultPlug.hasErrors() ){
 ## Complete Sample Usage
 
 ### Extend ```Plug``` base class
-```
+```java
 public class Calculator extends Plug {
 	
     public override Object execute(Object data) {
@@ -119,7 +122,7 @@ public class AdditionServiceFailed extends Plug {
 ### Invoke as a normal class or from another Plugit
 
 #### Normal Class : 
-```
+```java
 Object result = Plug.plugin('CalculatorNanoService')
                     .exec(new Map<String,Decimal>{
                         'no1' => 1,
@@ -129,7 +132,7 @@ Object result = Plug.plugin('CalculatorNanoService')
 ```
 
 #### Another Plugit : 
-```
+```java
 plugin('CalculatorNanoService')
       .exec(new Map<String,Decimal>{
 	    'no1' => 1,
